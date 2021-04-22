@@ -51,7 +51,8 @@ async getLocationsByZip(req,res) {
 }
 
 async getLocationsByBorough(req,res) {
-    let borough = req.params.borugh
+    let borough = req.params.borough
+    console.log(borough)
     try {
         let locations = await knex('locations').where({
         city:borough
